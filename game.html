@@ -1,189 +1,183 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Mockup</title>
+    <title>เกมแข่งรถ</title>
     <style>
         body {
-            font-family: 'Source Sans Pro', sans-serif;
-            background-color: #2e2e2e;
-            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            color: white;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            padding: 20px 0;
         }
 
-        .game-window {
-            width: 90vw;
-            height: 80vh;
-            background-color: #3e3e3e;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        .game-container {
+            width: 400px;
+            height: 600px;
+            border: 5px solid #555;
             position: relative;
-            display: flex;
-            flex-direction: column;
             overflow: hidden;
-        }
-
-        .top-bar {
-            height: 50px;
-            background-color: #252525;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            justify-content: space-between;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        .top-bar .roblox-logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .top-bar .roblox-logo::before {
-            content: 'R';
-            color: #00a2ff;
-        }
-
-        .top-bar .player-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .player-info .profile-pic {
-            width: 35px;
-            height: 35px;
-            background-color: #00a2ff;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            margin-right: 10px;
-        }
-
-        .player-info .username {
-            font-size: 16px;
-        }
-        
-        .game-viewport {
-            flex-grow: 1;
-            background-color: #555;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2.5em;
-            color: #ccc;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
-
-        .bottom-ui {
-            height: 60px;
-            background-color: #252525;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0 15px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .bottom-ui .icon {
-            width: 45px;
-            height: 45px;
-            background-color: #4a4a4a;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            color: #ddd;
-            transition: background-color 0.2s;
-        }
-
-        .bottom-ui .icon:hover {
-            background-color: #00a2ff;
-        }
-
-        .chat-box {
-            position: absolute;
-            bottom: 60px;
-            left: 20px;
-            width: 250px;
-            height: 150px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            padding: 10px;
-            box-sizing: border-box;
-            font-size: 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-        }
-
-        .chat-messages {
-            flex-grow: 1;
-            overflow-y: auto;
-            margin-bottom: 5px;
-        }
-
-        .chat-input-container {
-            display: flex;
-            
-        }
-
-        .chat-input {
-            width: 100%;
             background-color: #444;
-            border: none;
-            color: #fff;
-            padding: 8px;
+        }
+
+        .road {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .car {
+            width: 50px;
+            height: 80px;
+            background-color: #007BFF;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             border-radius: 5px;
-            outline: none;
+        }
+
+        .obstacles {
+            width: 50px;
+            height: 80px;
+            background-color: #FF5733;
+            position: absolute;
+            top: -100px;
+            border-radius: 5px;
+        }
+
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .controls p {
+            margin: 5px 0;
+        }
+
+        #start-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        #start-btn:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
 
-    <div class="game-window">
-        <div class="top-bar">
-            <div class="roblox-logo"></div>
-            <div class="player-info">
-                <div class="profile-pic"></div>
-                <div class="username">User1234</div>
-            </div>
-        </div>
-
-        <div class="game-viewport">
-            Mockup Game World
-        </div>
-
-        <div class="bottom-ui">
-            <div class="icon">🏠</div>
-            <div class="icon">👤</div>
-            <div class="icon">🎒</div>
-            <div class="icon">⚙️</div>
-        </div>
-
-        <div class="chat-box">
-            <div class="chat-messages">
-                <p style="color: #00a2ff;">[SYSTEM]: Welcome to the game!</p>
-                <p><strong>Player2:</strong> Hey!</p>
-                <p><strong>Player3:</strong> This is a cool mockup!</p>
-            </div>
-            <div class="chat-input-container">
-                <input type="text" class="chat-input" placeholder="Say something...">
-            </div>
+    <h1>เกมแข่งรถ</h1>
+    <p>สร้างโดย: จิรทีปต์ นกไม้ เลขที่32</p>
+    <div class="game-container">
+        <div class="road">
+            <div class="car"></div>
+            <div class="obstacles"></div>
         </div>
     </div>
 
+    <div class="controls">
+        <button id="start-btn">เริ่มเกม</button>
+        <p>คะแนน: <span id="score">0</span></p>
+    </div>
+
+    <script>
+        const car = document.querySelector('.car');
+        const obstacles = document.querySelector('.obstacles');
+        const startBtn = document.getElementById('start-btn');
+        const scoreDisplay = document.getElementById('score');
+        const road = document.querySelector('.road');
+
+        let score = 0;
+        let isPlaying = false;
+        let carPositionX = 175;
+        let obstaclePosition = 0;
+        let obstacleSpeed = 5;
+
+        let gameInterval;
+        let collisionInterval;
+        let scoreInterval;
+
+        function startGame() {
+            isPlaying = true;
+            score = 0;
+            scoreDisplay.textContent = score;
+            startBtn.style.display = 'none';
+
+            obstaclePosition = -100;
+            obstacles.style.top = `${obstaclePosition}px`;
+            obstacles.style.left = `${Math.floor(Math.random() * (road.clientWidth - 50))}px`;
+
+            gameInterval = setInterval(moveObstacle, 20);
+            collisionInterval = setInterval(checkCollision, 10);
+            scoreInterval = setInterval(() => {
+                if (isPlaying) {
+                    score++;
+                    scoreDisplay.textContent = score;
+                }
+            }, 100);
+        }
+
+        function moveObstacle() {
+            if (!isPlaying) return;
+
+            obstaclePosition += obstacleSpeed;
+            obstacles.style.top = `${obstaclePosition}px`;
+
+            if (obstaclePosition > road.clientHeight) {
+                obstaclePosition = -100;
+                obstacles.style.left = `${Math.floor(Math.random() * (road.clientWidth - 50))}px`;
+            }
+        }
+
+        function checkCollision() {
+            if (!isPlaying) return;
+
+            const carRect = car.getBoundingClientRect();
+            const obstacleRect = obstacles.getBoundingClientRect();
+
+            if (
+                carRect.bottom > obstacleRect.top &&
+                carRect.top < obstacleRect.bottom &&
+                carRect.right > obstacleRect.left &&
+                carRect.left < obstacleRect.right
+            ) {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            isPlaying = false;
+            clearInterval(gameInterval);
+            clearInterval(collisionInterval);
+            clearInterval(scoreInterval);
+            alert(`เกมโอเวอร์! คะแนนของคุณ: ${score}`);
+            startBtn.style.display = 'block';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (!isPlaying) return;
+
+            if (e.key === 'ArrowLeft' && carPositionX > 0) {
+                carPositionX -= 10;
+                car.style.left = `${carPositionX}px`;
+            } else if (e.key === 'ArrowRight' && carPositionX < road.clientWidth - car.offsetWidth) {
+                carPositionX += 10;
+                car.style.left = `${carPositionX}px`;
+            }
+        });
+
+        startBtn.addEventListener('click', startGame);
+    </script>
 </body>
 </html>
