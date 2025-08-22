@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Mockup</title>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #2e2e2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .game-window {
+            width: 90vw;
+            height: 80vh;
+            background-color: #3e3e3e;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .top-bar {
+            height: 50px;
+            background-color: #252525;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            justify-content: space-between;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .top-bar .roblox-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .top-bar .roblox-logo::before {
+            content: 'R';
+            color: #00a2ff;
+        }
+
+        .top-bar .player-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .player-info .profile-pic {
+            width: 35px;
+            height: 35px;
+            background-color: #00a2ff;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-right: 10px;
+        }
+
+        .player-info .username {
+            font-size: 16px;
+        }
+        
+        .game-viewport {
+            flex-grow: 1;
+            background-color: #555;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            color: #ccc;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .bottom-ui {
+            height: 60px;
+            background-color: #252525;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .bottom-ui .icon {
+            width: 45px;
+            height: 45px;
+            background-color: #4a4a4a;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #ddd;
+            transition: background-color 0.2s;
+        }
+
+        .bottom-ui .icon:hover {
+            background-color: #00a2ff;
+        }
+
+        .chat-box {
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            width: 250px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 5px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            
+        }
+
+        .chat-input {
+            width: 100%;
+            background-color: #444;
+            border: none;
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-window">
+        <div class="top-bar">
+            <div class="roblox-logo"></div>
+            <div class="player-info">
+                <div class="profile-pic"></div>
+                <div class="username">User1234</div>
+            </div>
+        </div>
+
+        <div class="game-viewport">
+            Mockup Game World
+        </div>
+
+        <div class="bottom-ui">
+            <div class="icon">🏠</div>
+            <div class="icon">👤</div>
+            <div class="icon">🎒</div>
+            <div class="icon">⚙️</div>
+        </div>
+
+        <div class="chat-box">
+            <div class="chat-messages">
+                <p style="color: #00a2ff;">[SYSTEM]: Welcome to the game!</p>
+                <p><strong>Player2:</strong> Hey!</p>
+                <p><strong>Player3:</strong> This is a cool mockup!</p>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" placeholder="Say something...">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
