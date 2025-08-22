@@ -3,101 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>หน้าแนะนำตัวเอง</title>
+  <title>แนะนำตัวเอง - Galaxy Theme</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-      color: #333;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
     }
 
-    .container {
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 50px 20px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
-      margin-top: 20px;
-      font-size: 2.5rem;
+      font-size: 3em;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #9f78ff, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    h2 {
-      font-weight: normal;
-      color: #666;
-      margin-top: 5px;
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+      object-fit: cover;
     }
 
     p {
-      text-align: center;
+      font-size: 1.2em;
       max-width: 600px;
       line-height: 1.6;
-      margin: 20px 0;
     }
 
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      text-decoration: none;
+    .button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      background-color: #00c3ff;
       color: white;
-      background-color: #0077b5;
-      padding: 10px 15px;
-      border-radius: 5px;
+      border-radius: 25px;
+      cursor: pointer;
       transition: background 0.3s;
     }
 
-    .social-links a:hover {
-      background-color: #005582;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-      }
-
-      .social-links {
-        flex-direction: column;
-        align-items: center;
-      }
+    .button:hover {
+      background-color: #009edb;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.pravatar.cc/300" alt="รูปโปรไฟล์" class="profile-pic">
-    <h1>สวัสดีครับ ผมชื่อธนากร</h1>
-    <h2>Frontend Developer | นักออกแบบ UI</h2>
+  <div class="overlay">
+    <img class="avatar" src="https://i.imgur.com/your-avatar.png" alt="Your Avatar">
+    <h1>สวัสดีครับ ผมชื่อ [ชื่อของคุณ]</h1>
     <p>
-      ผมมีความหลงใหลในการออกแบบเว็บไซต์และประสบการณ์ผู้ใช้ มีความเชี่ยวชาญใน HTML, CSS, JavaScript และ Framework อย่าง React.
-      เป้าหมายของผมคือการสร้างเว็บไซต์ที่ใช้งานง่าย สวยงาม และตอบสนองผู้ใช้ได้ดี.
+      ผมเป็นนักพัฒนาเว็บที่หลงใหลในเทคโนโลยี และชอบสำรวจความลึกลับของจักรวาล<br>
+      มีความถนัดใน HTML, CSS, JavaScript และชอบสร้างสรรค์งานออกแบบแนว Sci-Fi 🌌
     </p>
-    <div class="social-links">
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">GitHub</a>
-      <a href="mailto:your@email.com">Email</a>
-    </div>
+    <button class="button">ติดต่อฉัน</button>
   </div>
 </body>
 </html>
