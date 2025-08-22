@@ -1,79 +1,143 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>แนะนำตัวเอง - Galaxy Theme</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #9f78ff, #00c3ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 20px;
-      object-fit: cover;
-    }
-
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    .button {
-      margin-top: 30px;
-      padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      background-color: #00c3ff;
-      color: white;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background-color: #009edb;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว: [ชื่อ-นามสกุล]</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #1a237e; /* Deep indigo color */
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 300;
+            border: none;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .profile-header p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-item {
+            margin-bottom: 10px;
+        }
+        .section-item h3 {
+            margin: 0;
+            color: #4a4a4a;
+        }
+        .section-item p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f0f4f7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            border-left: 4px solid #1a237e;
+        }
+        a {
+            color: #1a237e;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay">
-    <img class="avatar" src="https://i.imgur.com/your-avatar.png" alt="Your Avatar">
-    <h1>สวัสดีครับ ผมชื่อ [ชื่อของคุณ]</h1>
-    <p>
-      ผมเป็นนักพัฒนาเว็บที่หลงใหลในเทคโนโลยี และชอบสำรวจความลึกลับของจักรวาล<br>
-      มีความถนัดใน HTML, CSS, JavaScript และชอบสร้างสรรค์งานออกแบบแนว Sci-Fi 🌌
-    </p>
-    <button class="button">ติดต่อฉัน</button>
-  </div>
+
+    <div class="container">
+        
+        <div class="profile-header">
+            <h1>[ชื่อ-นามสกุล]</h1>
+            <p>วิศวกร [สาขาเฉพาะทาง เช่น โยธา, ซอฟต์แวร์, เครื่องกล]</p>
+            <p>[ใส่คำโปรยสั้นๆ ที่แสดงถึงจุดเด่นของคุณ เช่น "มุ่งมั่นในการสร้างสรรค์นวัตกรรมและแก้ไขปัญหาที่ซับซ้อน"]</p>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>ประวัติโดยย่อ</h2>
+            <p>
+                [เขียนสรุปประวัติส่วนตัวโดยย่อใน 2-3 ประโยค เน้นประสบการณ์สำคัญและทักษะหลัก เช่น "วิศวกร [สาขา] ที่มีประสบการณ์กว่า X ปี ในการ [อธิบายโปรเจกต์หรือหน้าที่สำคัญ] ผมมีความเชี่ยวชาญในด้าน [ระบุทักษะหลัก เช่น การจัดการโครงการ, การวิเคราะห์ข้อมูล, การออกแบบระบบ] และมุ่งมั่นที่จะนำความรู้มาประยุกต์ใช้เพื่อสร้างสรรค์โซลูชันที่มีประสิทธิภาพสูงสุด"]
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>ประสบการณ์การทำงาน</h2>
+            <div class="section-item">
+                <h3>[ตำแหน่ง]</h3>
+                <p><strong>[ชื่อบริษัท]</strong> | [ช่วงเวลาที่ทำงาน] เช่น พ.ศ. 2562 - ปัจจุบัน</p>
+                <ul>
+                    <li>[ระบุหน้าที่และความรับผิดชอบหลักที่ผ่านมา]</li>
+                    <li>[อธิบายความสำเร็จที่สำคัญ หรือผลงานที่เป็นรูปธรรม]</li>
+                    <li>[แสดงตัวเลขหรือข้อมูลเชิงปริมาณที่น่าสนใจ เช่น ลดต้นทุนลง 15%, เพิ่มประสิทธิภาพการผลิตขึ้น 20%]</li>
+                </ul>
+            </div>
+            </div>
+
+        <div class="section">
+            <h2>ทักษะ</h2>
+            <ul>
+                <li><strong>ทักษะเฉพาะทาง:</strong> [เขียนทักษะที่เกี่ยวข้องกับสายงาน เช่น CAD, Python, SolidWorks, C++ , MATLAB, BIM]</li>
+                <li><strong>ทักษะด้านการจัดการ:</strong> [เขียนทักษะด้านการบริหาร เช่น Project Management, Lean Manufacturing, Agile Methodology]</li>
+                <li><strong>ภาษา:</strong> [ระบุระดับความสามารถทางภาษา เช่น ภาษาอังกฤษ (ดีมาก), ภาษาจีน (สื่อสารได้)]</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>การศึกษา</h2>
+            <div class="section-item">
+                <h3>[ระดับการศึกษา] [สาขาวิชา]</h3>
+                <p><strong>[ชื่อสถาบัน]</strong>, [ปีที่สำเร็จการศึกษา]</p>
+                <p>[ระบุเกรดเฉลี่ย (ถ้าต้องการ) หรือรางวัลที่ได้รับ]</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="contact-info">
+            <p><strong>ติดต่อ:</strong> [เบอร์โทรศัพท์] | <a href="mailto:[อีเมลของคุณ]">[อีเมลของคุณ]</a> | <a href="https://th.linkedin.com/" target="_blank">LinkedIn</a></p>
+        </div>
+
+    </div>
+
 </body>
 </html>
